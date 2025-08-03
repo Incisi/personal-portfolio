@@ -36,26 +36,38 @@ function Contact() {
             <h2>Contato</h2>
             <p>Gostou do que viu? Vamos conversar. Me envie uma mensagem!</p>
             <form onSubmit={handleSubmit} className={styles.contactForm}>
-                <input
-                    type="text"
-                    placeholder="Seu Nome"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                <input
-                    type="email"
-                    placeholder="Seu E-mail"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <textarea
-                    placeholder="Sua Mensagem"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                />
+                <div>
+                    <label htmlFor="name" className={styles.formLabel}>Seu Nome</label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email" className={styles.formLabel}>Seu E-mail</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="message" className={styles.formLabel}>Sua Mensagem</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                    />
+                </div>
                 <button type="submit" disabled={status === 'sending'}>
                     {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
                 </button>

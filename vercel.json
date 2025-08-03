@@ -16,15 +16,11 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/src/main.ts"
-    },
-    {
-      "source": "/(.*\\.js|.*\\.css|.*\\.png|.*\\.jpg|.*\\.svg|.*\\.ico|.*\\.woff2?)",
-      "destination": "/portfolio/$1"
+      "destination": "/api/src_main.ts"
     },
     {
       "source": "/(.*)",
-      "destination": "/portfolio/index.html"
+      "destination": "/portfolio/"
     }
   ]
 }

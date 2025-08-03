@@ -10,60 +10,84 @@
 
 .contactSection p {
     font-size: 1.1rem;
-    color: #c4c4c4;
-    margin-bottom: 3rem;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 1rem auto 3rem auto;
 }
 
 .contactForm {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.formLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #c0c0c0;
 }
 
 .contactForm input,
 .contactForm textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background-color: #1a1a1a;
-    color: #fff;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #1f1f1f;
+    color: #f0f0f0;
     font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.25);
 }
 
 .contactForm textarea {
-    min-height: 150px;
+    min-height: 180px;
     resize: vertical;
 }
 
 .contactForm button {
-    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    padding: 12px 20px;
     border-radius: 8px;
     border: none;
     background-color: #4facfe;
     color: #fff;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .contactForm button:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    background-color: #3b9bfe;
 }
 
 .contactForm button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    transform: translateY(0);
 }
 
 .successMessage {
     color: #2ecc71;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .errorMessage {
     color: #e74c3c;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
