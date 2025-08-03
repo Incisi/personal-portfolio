@@ -21,3 +21,12 @@
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
 }
+
+.articleContent {
+    line-height: 1.7;
+    color: #c0c0c0;
+}
+
+.articleContent h3 {
+    color: #4facfe;
+}

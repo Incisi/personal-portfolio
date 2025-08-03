@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { api } from '../../services/api';
+import { motion } from 'framer-motion';
 import styles from './Contact.module.css';
 
 function Contact() {
@@ -24,7 +25,14 @@ function Contact() {
     };
 
     return (
-        <section className={styles.contactSection}>
+        <motion.section
+            id="contact"
+            className={styles.contactSection}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
             <h2>Contato</h2>
             <p>Gostou do que viu? Vamos conversar. Me envie uma mensagem!</p>
             <form onSubmit={handleSubmit} className={styles.contactForm}>
@@ -54,7 +62,7 @@ function Contact() {
             </form>
             {status === 'success' && <p className={styles.successMessage}>Mensagem enviada com sucesso! Obrigado.</p>}
             {status === 'error' && <p className={styles.errorMessage}>Ocorreu um erro. Tente novamente mais tarde.</p>}
-        </section>
+        </motion.section>
     );
 }
 

@@ -1,9 +1,16 @@
+import { motion } from 'framer-motion';
 import styles from './About.module.css';
 import profilePic from '../../assets/profile-pic.jpg';
 
 function About() {
     return (
-        <section className={styles.about}>
+        <motion.section
+            className={styles.about}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
             <div className={styles.aboutContent}>
                 <img src={profilePic} alt="David Incisi dos Santos" className={styles.profilePic} />
                 <div className={styles.textContent}>
@@ -20,7 +27,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 

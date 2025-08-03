@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { api } from '../../services/api';
+import { motion } from 'framer-motion';
 import styles from './TechStack.module.css';
 import { TechIcon } from '../../utils/IconMapper';
 
@@ -40,7 +41,13 @@ function TechStack() {
     if (loading) return <section className={styles.techSection}><p>Carregando tecnologias...</p></section>
 
     return (
-        <section className={styles.techSection}>
+        <motion.section
+            className={styles.techSection}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
             <h2>Minhas Tecnologias</h2>
             <p className={styles.techSubtitle}>As ferramentas e tecnologias com as quais tenho experiência e venho me aprimorando.</p>
             <div className={styles.categories}>
@@ -54,13 +61,16 @@ function TechStack() {
                                         <TechIcon iconName={tech.iconName} />
                                     </div>
                                     <span>{tech.name}</span>
+                                    <div className={styles.descriptionPopup}>
+                                        {tech.description}
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 }
 

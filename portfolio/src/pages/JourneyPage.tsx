@@ -5,11 +5,14 @@ import styles from './JourneyPage.module.css';
 import CourseList from '../components/CourseList/CourseList';
 import BookList from '../components/BookList/BookList';
 import ArticleList from '../components/ArticleList/ArticleList';
+import Modal from '../components/Admin/Modal/Modal';
+import ReactMarkdown from 'react-markdown';
 
 function JourneyPage() {
     const [courses, setCourses] = useState<Course[]>([]);
     const [books, setBooks] = useState<Book[]>([]);
     const [articles, setArticles] = useState<Article[]>([]);
+    const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -53,8 +56,20 @@ function JourneyPage() {
 
             <section>
                 <h2>Diário de Bordo (Artigos)</h2>
-                {articles.length > 0 ? <ArticleList articles={articles} /> : <p>Nenhum artigo publicado ainda.</p>}
+                {articles.length > 0 ? (
+                    <ArticleList articles={articles} onArticleClick={setSelectedArticle} />
+                ) : <p>Nenhum artigo publicado ainda.</p>}
             </section>
+
+            <Modal
+                isOpen={!!selectedArticle}
+                onClose={() => setSelectedArticle(null)}
+                title={selectedArticle?.title || ''}
+            >
+                <div className={styles.articleContent}>
+                    <ReactMarkdown>{selectedArticle?.content || ''}</ReactMarkdown>
+                </div>
+            </Modal>
         </main>
     );
 }

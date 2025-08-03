@@ -7,6 +7,8 @@ import { GithubModule } from './modules/github/github.module';
 import { ContactModule } from './modules/contact/contact.module';
 import { JourneyModule } from './modules/journey/journey.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { SeederModule } from './modules/seeder/seeder.module';
+import { CommandModule } from './commands/commands.module';
 
 @Module({
   imports: [
@@ -29,6 +31,8 @@ import { AuthModule } from './modules/auth/auth.module';
     ContactModule,
     JourneyModule,
     AuthModule,
+    SeederModule,
+    CommandModule,
   ],
   controllers: [AppController],
   providers: [AppService],

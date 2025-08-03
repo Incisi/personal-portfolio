@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { api } from '../../services/api';
+import { motion } from 'framer-motion';
 import styles from './Experience.module.css';
 
 interface Experience {
@@ -31,7 +32,13 @@ function Experience() {
     if (loading) return <section className={styles.experienceSection}><p>Carregando experiências...</p></section>
 
     return (
-        <section className={styles.experienceSection}>
+        <motion.section
+            className={styles.experienceSection}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
             <h2>Experiência Profissional</h2>
             <div className={styles.timeline}>
                 {experiences.map((exp) => (
@@ -50,7 +57,7 @@ function Experience() {
                     </div>
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 }
 

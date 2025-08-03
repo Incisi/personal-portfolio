@@ -1,0 +1,164 @@
+.tableContainer {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.tableContainer h3 {
+    margin: 0;
+}
+
+.crudForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #c0c0c0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.crudForm input,
+.crudForm textarea,
+.crudForm select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.crudForm select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+.crudForm input:focus,
+.crudForm textarea:focus,
+.crudForm select:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.25);
+}
+
+.crudForm textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.crudForm button {
+    margin-top: 1rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4facfe;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.crudForm button:hover {
+    transform: translateY(-2px);
+    background-color: #3b9bfe;
+}
+
+.crudForm button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: translateY(0);
+}
+
+.iconSelector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.iconSelector select {
+    flex: 1;
+}
+
+.techTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.techTable th,
+.techTable td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+}
+
+.techTable th {
+    color: #aaa;
+}
+
+.actionButton {
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    border: 1px solid #4facfe;
+    background-color: transparent;
+    color: #4facfe;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actionButton:hover {
+    background-color: #4facfe;
+    color: #fff;
+}
+
+.deleteButton {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.deleteButton:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.addButton {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #2ecc71;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.addButton:hover {
+    opacity: 0.9;
+}

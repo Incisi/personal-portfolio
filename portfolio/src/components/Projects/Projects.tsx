@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { api } from '../../services/api';
+import { motion } from 'framer-motion';
 import styles from './Projects.module.css';
 
 interface PinnedRepo {
@@ -33,7 +34,13 @@ function Projects() {
     }, []);
 
     return (
-        <section className={styles.projectsSection}>
+        <motion.section
+            className={styles.projectsSection}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
             <h2>Projetos em Destaque</h2>
             {loading && <p>Carregando projetos...</p>}
             {error && <p className={styles.error}>{error}</p>}
@@ -52,7 +59,7 @@ function Projects() {
                     </a>
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 }
 

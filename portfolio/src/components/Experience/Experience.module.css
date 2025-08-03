@@ -124,3 +124,31 @@
     color: #c0c0c0;
     margin-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+
+    .timeline::after {
+        left: 8px;
+    }
+
+    .timelineItem {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 15px;
+        left: 0;
+        text-align: left !important;
+    }
+
+    .timelineItem:nth-child(odd) .timelineDot,
+    .timelineItem:nth-child(even) .timelineDot {
+        left: 0;
+    }
+
+    .timelineItem:nth-child(odd) .timelineContent::before,
+    .timelineItem:nth-child(even) .timelineContent::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #333 transparent transparent;
+    }
+}
