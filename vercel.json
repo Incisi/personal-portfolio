@@ -19,8 +19,12 @@
       "destination": "/api/src/main.ts"
     },
     {
+      "source": "/(.*\\.js|.*\\.css|.*\\.png|.*\\.jpg|.*\\.svg|.*\\.ico|.*\\.woff2?)",
+      "destination": "/portfolio/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/portfolio/"
+      "destination": "/portfolio/index.html"
     }
   ]
 }
