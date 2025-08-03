@@ -1,5 +1,5 @@
 import type { Article } from '../../types/journey';
-import styles from '../CourseCard/JourneyCard.module.css';
+import styles from '../JourneyCards.module.css';
 import { Link } from 'react-router-dom';
 
 interface ArticleCardProps {
