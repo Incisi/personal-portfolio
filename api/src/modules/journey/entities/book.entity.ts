@@ -12,7 +12,7 @@ export class Book {
   author: string;
 
   @Column({ nullable: true })
-  coverUrl: string;
+  coverUrl?: string;
 
   @Column('text')
   summary: string;

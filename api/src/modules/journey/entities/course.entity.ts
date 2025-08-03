@@ -15,5 +15,5 @@ export class Course {
   completionDate: Date;
 
   @Column({ nullable: true })
-  certificateUrl: string;
+  certificateUrl?: string;
 }
