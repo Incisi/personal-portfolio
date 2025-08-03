@@ -13,9 +13,9 @@ export class SeederService implements OnModuleInit {
     ) {}
 
     async onModuleInit() {
-        if (process.env.NODE_ENV !== 'production') {
-        this.logger.log('Iniciando seeder de desenvolvimento...');
-        await this.seedAdminUser();
+        if (process.env.NODE_ENV === 'development') {
+            this.logger.log('Iniciando seeder de desenvolvimento...');
+            await this.seedAdminUser();
         }
     }
 
