@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import styles from './About.module.css';
-import profilePic from '../../assets/profile-pic.webp';
 
 function About() {
     return (
@@ -12,7 +11,7 @@ function About() {
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <div className={styles.aboutContent}>
-                <img src={profilePic} alt="David Incisi" className={styles.profilePic} />
+                <img src="/profile-pic.webp" alt="David Incisi" className={styles.profilePic} />
                 <div className={styles.textContent}>
                     <h2>Sobre Mim</h2>
                     <p>

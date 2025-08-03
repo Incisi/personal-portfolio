@@ -44,11 +44,16 @@
 @media screen and (max-width: 768px) {
     .modalOverlay {
         align-items: flex-start;
-        padding-top: 5vh;
+        padding: 5vh 1rem;
     }
 
     .modalContent {
         max-height: 85vh;
         overflow-y: auto;
+    }
+
+    .modalBody {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
     }
 }

@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import JourneyPage from './pages/JourneyPage';
 import LoginPage from './pages/LoginPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
+import ArticlePage from './pages/ArticlePage';
 import Navbar from './components/Navbar/Navbar';
 import ProtectedRoute from './components/Admin/ProtectedRoute';
 
@@ -16,6 +17,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/journey" element={<JourneyPage />} />
         <Route path="/login" element={<LoginPage />} />
+
+        <Route path="/articles/:id" element={<ArticlePage />} />
 
         <Route
           path="/admin"
