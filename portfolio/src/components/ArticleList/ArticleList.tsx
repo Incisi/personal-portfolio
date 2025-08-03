@@ -1,6 +1,6 @@
 import type { Article } from '../../types/journey';
 import ArticleCard from '../ArticleCard/ArticleCard';
-import styles from '../CourseList/List.module.css';
+import styles from '../JourneyLists.module.css';
 
 const ArticleList = ({ articles }: { articles: Article[] }) => (
     <div className={styles.grid}>
