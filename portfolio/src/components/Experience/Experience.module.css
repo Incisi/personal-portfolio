@@ -101,7 +101,7 @@
 }
 
 .company {
-    color: #c0c0c0;
+    color: #e0e0e0;
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 0.25rem;
@@ -121,34 +121,41 @@
 
 .timelineContent li {
     line-height: 1.6;
-    color: #c0c0c0;
+    color: #e0e0e0;
     margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
-
     .timeline::after {
-        left: 8px;
+        left: 15px;
     }
 
     .timelineItem {
         width: 100%;
-        padding-left: 40px;
+        padding-left: 50px;
         padding-right: 15px;
-        left: 0;
+        left: 0 !important;
         text-align: left !important;
+    }
+
+    .timelineDot {
+        left: 7px;
     }
 
     .timelineItem:nth-child(odd) .timelineDot,
     .timelineItem:nth-child(even) .timelineDot {
-        left: 0;
+        left: 7px;
     }
 
-    .timelineItem:nth-child(odd) .timelineContent::before,
-    .timelineItem:nth-child(even) .timelineContent::before {
+    .timelineItem .timelineContent::before {
         left: -10px;
         right: auto;
         border-width: 10px 10px 10px 0;
         border-color: transparent #333 transparent transparent;
+    }
+
+    .timelineItem:nth-child(odd) .timelineContent,
+    .timelineItem:nth-child(even) .timelineContent {
+        text-align: left;
     }
 }

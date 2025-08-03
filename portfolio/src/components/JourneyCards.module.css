@@ -19,7 +19,7 @@
 
 .cardSubtitle {
     margin: 0 0 0.5rem 0;
-    color: #c0c0c0;
+    color: #e0e0e0;
     font-weight: bold;
 }
 
@@ -58,6 +58,27 @@
 
 .bookSummary {
     font-size: 0.9rem;
-    color: #a0a0a0;
+    color: #c4c4c4;
     line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .bookCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bookCover {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .bookContent {
+        align-items: center;
+    }
+
+    .bookSummary {
+        text-align: justify;
+    }
 }

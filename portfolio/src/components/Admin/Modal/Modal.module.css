@@ -40,3 +40,15 @@
     color: #fff;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .modalOverlay {
+        align-items: flex-start;
+        padding-top: 5vh;
+    }
+
+    .modalContent {
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+}

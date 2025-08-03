@@ -24,13 +24,13 @@
 .title {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #c0c0c0;
+    color: #e0e0e0;
     margin-bottom: 1.5rem;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: #a0a0a0;
+    color: #c4c4c4;
     max-width: 600px;
     margin: 0 auto 2.5rem auto;
 }
@@ -78,7 +78,7 @@
 }
 
 .socialLinks a {
-    color: #c0c0c0;
+    color: #e0e0e0;
     font-size: 2rem;
     transition: color 0.2s ease-in-out;
 }

@@ -11,7 +11,7 @@
 
 .techSubtitle {
     font-size: 1.1rem;
-    color: #a0a0a0;
+    color: #c4c4c4;
     max-width: 600px;
     margin: 0 auto 3rem auto;
 }
@@ -87,7 +87,7 @@
     z-index: 10;
 
     font-size: 0.9rem;
-    color: #c0c0c0;
+    color: #e0e0e0;
     text-align: left;
     line-height: 1.5;
 }
@@ -106,4 +106,18 @@
     border-width: 5px;
     border-style: solid;
     border-color: #2a2a2a transparent transparent transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .techSection h2 {
+        font-size: 2rem;
+    }
+
+    .category h3 {
+        text-align: center;
+    }
+
+    .techGrid {
+        justify-content: center;
+    }
 }

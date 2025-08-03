@@ -32,7 +32,7 @@
 .textContent p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #c0c0c0;
+    color: #e0e0e0;
 }
 
 .motto {
@@ -46,4 +46,27 @@
 .motto p {
     margin: 0.5rem 0;
     color: #00f2fe;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profilePic {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
+
+    .textContent h2 {
+        font-size: 2rem;
+    }
+
+    .motto {
+        text-align: left;
+        margin: 2rem auto 0 auto;
+        max-width: 350px;
+    }
 }
