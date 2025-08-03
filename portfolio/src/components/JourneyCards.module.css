@@ -1,0 +1,63 @@
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.1);
+}
+
+.cardTitle {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.cardSubtitle {
+    margin: 0 0 0.5rem 0;
+    color: #c0c0c0;
+    font-weight: bold;
+}
+
+.cardDate {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.cardLink {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cardLink:hover {
+    text-decoration: underline;
+}
+
+.bookCard {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.bookCover {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.bookContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookSummary {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}

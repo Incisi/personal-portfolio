@@ -1,0 +1,88 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    background-color: #0c0c0c;
+}
+
+.heroContent {
+    max-width: 800px;
+}
+
+.name {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: -webkit-linear-gradient(45deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #c0c0c0;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.btnPrimary,
+.btnSecondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.btnPrimary {
+    background-color: #4facfe;
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    opacity: 0.9;
+}
+
+.btnSecondary {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btnSecondary:hover {
+    background-color: #fff;
+    color: #0c0c0c;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.socialLinks a {
+    color: #c0c0c0;
+    font-size: 2rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.socialLinks a:hover {
+    color: #4facfe;
+}

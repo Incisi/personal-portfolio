@@ -1,0 +1,126 @@
+.experienceSection {
+    padding: 4rem 2rem;
+    background-color: #121212;
+}
+
+.experienceSection h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #4facfe;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timelineItem {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timelineItem:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timelineItem:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timelineDot {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 4px solid #4facfe;
+    top: 24px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timelineItem:nth-child(odd) .timelineDot {
+    right: 32px;
+}
+
+.timelineItem:nth-child(even) .timelineDot {
+    left: 32px;
+}
+
+.timelineContent {
+    padding: 20px 30px;
+    background-color: #1a1a1a;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.timelineContent::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    border: medium solid #333;
+}
+
+.timelineItem:nth-child(odd) .timelineContent::before {
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #333;
+}
+
+.timelineItem:nth-child(even) .timelineContent::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #333 transparent transparent;
+}
+
+
+.timelineContent h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #4facfe;
+}
+
+.company {
+    color: #c0c0c0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.period {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.timelineContent ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.timelineContent li {
+    line-height: 1.6;
+    color: #c0c0c0;
+    margin-bottom: 0.5rem;
+}

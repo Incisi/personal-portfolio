@@ -1,0 +1,28 @@
+.footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #000;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.socialLinks a {
+    color: #888;
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.socialLinks a:hover {
+    color: #fff;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
