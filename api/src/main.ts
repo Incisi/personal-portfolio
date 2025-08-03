@@ -7,6 +7,8 @@ import helmet from 'helmet';
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
 
+	app.setGlobalPrefix('api');
+
 	const configService = app.get(ConfigService);
 	const frontendUrl = configService.get<string>('FRONTEND_URL');
 
