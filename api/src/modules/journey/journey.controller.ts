@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Patch, Delete, HttpCode, HttpStatus, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Patch, Delete, HttpCode, HttpStatus, UseGuards, Header, StreamableFile } from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { JourneyService } from './journey.service';
 import {
@@ -10,6 +10,14 @@ import {
 @Controller('journey')
 export class JourneyController {
     constructor(private readonly journeyService: JourneyService) {}
+
+    @Get('sitemap.xml')
+	@Header('Content-Type', 'application/xml')
+	@Header('Content-Encoding', 'gzip')
+	async getSitemap(): Promise<StreamableFile> {
+		const sitemapBuffer = await this.journeyService.generateSitemap();
+		return new StreamableFile(sitemapBuffer);
+	}
 
     // --- Technology Endpoints ---
     @UseGuards(JwtAuthGuard)
